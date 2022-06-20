@@ -27,10 +27,6 @@ const answers = {
     z: "zoo"
   };
   
-  // console.log(Object.keys(answers));
-  // console.log(Object.values(answers));
-  // console.log(answers.a);
-  
   let let1 = prompt(`Enter a letter`);
   let letter = let1.toLowerCase();
   console.log(letter);
