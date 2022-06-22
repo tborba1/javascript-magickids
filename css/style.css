@@ -10,11 +10,6 @@ body {
     text-align: center;
 }
 
-/*remove if do not use selector*/
-select {
-    border-radius: 10px;
-}
-
 input {
     border-radius: 10px;
 }
