@@ -1,3 +1,49 @@
 body {
     font-family: 'Combo', cursive;
+    background-image: conic-gradient(red, orange,yellow, green, blue, indigo, violet, red);
+    background-repeat: no-repeat;
+}
+  
+.container {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+/*remove if do not use selector*/
+select {
+    border-radius: 10px;
+}
+
+input {
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 10px;
+}
+
+img {
+    height: 95%;
+    width: 95%;
+}
+
+.ans {
+    margin-top: -50%;
+    margin-bottom: 50%;
+}
+
+footer {
+    border-style: solid;
+    border-radius: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: black;
+    background-image: conic-gradient(red, orange,yellow, green, blue, indigo, violet, red);
 }
