@@ -1,35 +1,36 @@
 const answers = {
-  a: { word: "apple", cls: "fa-regular fa-apple-whole" },
-  b: { word: "balloon", cls: "fa-regular fa-balloon" },
-  c: { word: "cat", cls: "fa-regular fa-cat" },
-  d: { word: "dog", cls: "fa-regular fa-dog" },
-  e: { word: "elephant", cls: "fa-regular fa-elephant" },
-  f: { word: "fish", cls: "fa-regular fa-fish" },
-  g: { word: "guitar", cls: "fa-regular fa-guitar" },
-  h: { word: "house", cls: "fa-regular fa-house" },
-  i: { word: "ice cream", cls: "fa-regular fa-ice-cream" },
-  j: { word: "jet", cls: "fa-regular fa-jet-fighter" },
-  k: { word: "key", cls: "fa-regular fa-key" },
-  l: { word: "light bulb", cls: "fa-regular fa-lightbulb-on" },
-  m: { word: "monkey", cls: "fa-regular fa-monkey" },
-  n: { word: "narwhal", cls: "fa-regular fa-narwhal" },
-  o: { word: "octopus", cls: "fa-brands fa-octopus-deploy" },
-  p: { word: "pig", cls: "fa-regular fa-pig" },
-  q: { word: "question mark", cls: "fa-regular fa-circle-question" },
-  r: { word: "rocket", cls: "fa-regular fa-rocket-launch" },
-  s: { word: "sun", cls: "fa-regular fa-sun-bright" },
-  t: { word: "turtle", cls: "fa-regular fa-turtle" },
-  u: { word: "umbrella", cls: "fa-regular fa-umbrella" },
-  v: { word: "volcano", cls: "fa-regular fa-volcano" },
-  w: { word: "whale", cls: "fa-regular fa-whale" },
-  x: { word: "the letter X", cls: "fa-regular fa-circle-x" },
-  y: { word: "yin-yang", cls: "fa-regular fa-yin-yang" },
-  z: { word: "zipper", cls: "fa-regular fa-file-zipper" }
+  a: { word: "apple", cls1: "fa-solid", cls2: "fa-apple-whole" },
+  b: { word: "baby", cls1: "fa-solid", cls2: "fa-baby" },
+  c: { word: "cat", cls1: "fa-solid", cls2: "fa-cat" },
+  d: { word: "dog", cls1: "fa-solid", cls2: "fa-dog" },
+  e: { word: "eye", cls1: "fa-solid", cls2: "fa-eye" },
+  f: { word: "fish", cls1: "fa-solid", cls2: "fa-fish" },
+  g: { word: "guitar", cls1: "fa-solid", cls2: "fa-guitar" },
+  h: { word: "house", cls1: "fa-solid", cls2: "fa-house" },
+  i: { word: "ice cream", cls1: "fa-solid", cls2: "fa-ice-cream" },
+  j: { word: "jet", cls1: "fa-solid", cls2: "fa-jet-fighter" },
+  k: { word: "key", cls1: "fa-solid", cls2: "fa-key" },
+  l: { word: "light bulb", cls1: "fa-solid", cls2: "fa-lightbulb" },
+  m: { word: "moon", cls1: "fa-solid", cls2: "fa-moon" },
+  n: { word: "ninja", cls1: "fa-solid", cls2: "fa-user-ninja" },
+  o: { word: "octopus", cls1: "fa-brands", cls2: "fa-octopus-deploy" },
+  p: { word: "paw print", cls1: "fa-solid", cls2: "fa-paw" },
+  q: { word: "question mark", cls1: "fa-solid", cls2: "fa-circle-question" },
+  r: { word: "rocket", cls1: "fa-solid", cls2: "fa-rocket" },
+  s: { word: "sun", cls1: "fa-solid", cls2: "fa-sun" },
+  t: { word: "tree", cls1: "fa-solid", cls2: "fa-tree" },
+  u: { word: "umbrella", cls1: "fa-solid", cls2: "fa-umbrella" },
+  v: { word: "volcano", cls1: "fa-solid", cls2: "fa-volcano" },
+  w: { word: "wrench", cls1: "fa-solid", cls2: "fa-wrench" },
+  x: { word: "x-ray", cls1: "fa-solid", cls2: "fa-x-ray" },
+  y: { word: "YouTube", cls1: "fa-brands", cls2: "fa-youtube" },
+  z: { word: "zipper", cls1: "fa-solid", cls2: "fa-file-zipper" }
 };
 
 const button = document.getElementById("button");
 const ans = document.getElementById("ans");
 const input = document.getElementById("letter");
+const ansIcon = document.getElementById("ansIcon");
 
 button.addEventListener("click", function () {
   // get the value of the input
@@ -40,7 +41,10 @@ button.addEventListener("click", function () {
   } else {
     const answer = answers[letter];
     const word = answer.word;
-    const cls = answer.cls;
+    const cls1 = answer.cls1;
+    const cls2 = answer.cls2;
     ans.innerHTML = word;
+    ansIcon.classList.add(cls1);
+    ansIcon.classList.add(cls2);
   }
 });
