@@ -1,24 +1,3 @@
-// let let1 = prompt(`Enter a letter`);
-
-let button = document.getElementById("button");
-let ans = document.getElementById("ans");
-let letter = document.getElementById("letter");
-// let answer = answers[letter];
-// let word = answer.word;
-// let cls = answer.cls;
-
-// console.log(letter);
-// console.log(answer);
-// console.log(word);
-// console.log(cls);
-// console.log(`${letter} = ${word}`);
-// console.log(cls);
-
-button.addEventListener("click", function () {
-  if (letter.value.length !== 1) {
-    alert("Enter a letter!");
-  } else {
-
 const answers = {
   a: { word: "apple", cls: "fa-regular fa-apple-whole" },
   b: { word: "balloon", cls: "fa-regular fa-balloon" },
@@ -48,9 +27,20 @@ const answers = {
   z: { word: "zipper", cls: "fa-regular fa-file-zipper" }
 };
 
-let answer = answers[letter];
-let word = answer.word;
-let cls = answer.cls;
-ans.innerHTML = word;
+const button = document.getElementById("button");
+const ans = document.getElementById("ans");
+const input = document.getElementById("letter");
 
-}});
+button.addEventListener("click", function () {
+  // get the value of the input
+  const letter = input.value.toLowerCase();
+  // ensure that letter is 1 character long and is one of the keys of `answers`
+  if (letter.length !== 1 || !(letter in answers)) {
+    alert("Enter a letter!");
+  } else {
+    const answer = answers[letter];
+    const word = answer.word;
+    const cls = answer.cls;
+    ans.innerHTML = word;
+  }
+});
