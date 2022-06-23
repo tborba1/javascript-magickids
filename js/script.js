@@ -3,7 +3,7 @@ const answers = {
   b: { word: "baby", cls1: "fa-solid", cls2: "fa-baby" },
   c: { word: "cat", cls1: "fa-solid", cls2: "fa-cat" },
   d: { word: "dog", cls1: "fa-solid", cls2: "fa-dog" },
-  e: { word: "eye", cls1: "fa-solid", cls2: "fa-eye" },
+  e: { word: "earth", cls1: "fa-solid", cls2: "fa-earth-americas" },
   f: { word: "fish", cls1: "fa-solid", cls2: "fa-fish" },
   g: { word: "guitar", cls1: "fa-solid", cls2: "fa-guitar" },
   h: { word: "house", cls1: "fa-solid", cls2: "fa-house" },
