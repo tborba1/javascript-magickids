@@ -31,20 +31,24 @@ const button = document.getElementById("button");
 const ans = document.getElementById("ans");
 const input = document.getElementById("letter");
 const ansIcon = document.getElementById("ansIcon");
+let cls1;
+let cls2;
 
 button.addEventListener("click", function () {
+  
   // get the value of the input
   const letter = input.value.toLowerCase();
+  event.preventDefault();
   // ensure that letter is 1 character long and is one of the keys of `answers`
   if (letter.length !== 1 || !(letter in answers)) {
     alert("Enter a letter!");
   } else {
     const answer = answers[letter];
     const word = answer.word;
-    const cls1 = answer.cls1;
-    const cls2 = answer.cls2;
+    ansIcon.classList.remove(cls1, cls2);
+    cls1 = answer.cls1;
+    cls2 = answer.cls2;
     ans.innerHTML = word;
-    ansIcon.classList.add(cls1);
-    ansIcon.classList.add(cls2);
+    ansIcon.classList.add(cls1, cls2);
   }
 });
