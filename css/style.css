@@ -1,7 +1,7 @@
 body {
     font-family: 'Combo', cursive;
-    background-image: conic-gradient(red, orange,yellow, green, blue, indigo, violet, red);
-    background-repeat: no-repeat;
+    /* background-image: conic-gradient(red, orange,yellow, green, blue, indigo, violet, red);
+    background-repeat: no-repeat; */
 }
   
 .container {
@@ -31,9 +31,12 @@ img {
     width: 95%;
 }
 
-.ans {
-    margin-top: -50%;
-    margin-bottom: 50%;
+#ans {
+    margin-top: -60%;
+}
+
+#ansIcon {
+    margin-bottom: 45%;
 }
 
 footer {
