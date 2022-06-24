@@ -27,6 +27,20 @@ const answers = {
   z: { word: "zipper", cls1: "fa-solid", cls2: "fa-file-zipper" }
 };
 
+const bgColors = [
+  "#F94144",
+  "#F3722C",
+  "#F8961E",
+  "#F9C74F",
+  "#90BE6D",
+  "#43AA8B",
+  "#577590",
+  "#B9E769",
+  "#EFEA5A",
+  "#048BA8",
+  "#54478C"
+];
+
 const button = document.getElementById("button");
 const ans = document.getElementById("ans");
 const input = document.getElementById("letter");
@@ -50,5 +64,7 @@ button.addEventListener("click", function () {
     cls2 = answer.cls2;
     ans.innerHTML = word;
     ansIcon.classList.add(cls1, cls2);
+    document.body.style.backgroundColor =
+    bgColors[Math.floor(Math.random() * bgColors.length)];
   }
 });
