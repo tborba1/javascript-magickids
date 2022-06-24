@@ -5,8 +5,8 @@ body {
 }
   
 .container {
-    height: 50%;
-    width: 50%;
+    height: 65%;
+    width: 65%;
     text-align: center;
 }
 
@@ -27,16 +27,18 @@ button {
 }
 
 img {
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
 }
 
 #ans {
     margin-top: -60%;
+    font-size: 50px;
 }
 
 #ansIcon {
     margin-bottom: 45%;
+    font-size: 50px;
 }
 
 footer {
